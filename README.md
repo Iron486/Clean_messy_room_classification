@@ -150,7 +150,7 @@ On the other hand, in the simple CNN and ANN, we have worse results, with a vali
 
 The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
-To improve the stability, it could be necessary also to use other additional data and also tweak even better the parameters, using an even larger batch size, and some regularization techniques.
+To improve the stability, it could be necessary also to use other additional data and also tweak even better the parameters, using an even larger batch size, some regularization techniques and more time available to train the model.
 
 I finally evaluated on test dataset the two CNNs and both classified correctly 8/10 of the dataset.
 
