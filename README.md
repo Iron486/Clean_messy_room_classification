@@ -16,28 +16,28 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>  </p>
 
-Layer (type)                 Output Shape              Param #   
-=================================================================
-flatten (Flatten)            (None, 182)               0         
-_________________________________________________________________
-batch_normalization (BatchNo (None, 182)               728       
-_________________________________________________________________
-dropout (Dropout)            (None, 182)               0         
-_________________________________________________________________
-dense (Dense)                (None, 6000)              1098000   
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 6000)              0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 1000)              6001000   
-_________________________________________________________________
-batch_normalization_1 (Batch (None, 1000)              4000      
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 1000)              0         
-_________________________________________________________________
-dense_2 (Dense)              (None, 32)                32032     
-_________________________________________________________________
-dense_3 (Dense)              (None, 1)                 33        
-=================================================================
+|Layer (type)                | Output Shape             | Param #   
+---------------------------------------------------------------
+|flatten (Flatten)           | (None, 182)              | 0         
+
+|batch_normalization (BatchNo| (None, 182)              | 728       
+
+|dropout (Dropout)           | (None, 182)              | 0         
+
+|dense (Dense)               | (None, 6000)             | 1098000   
+
+|dropout_1 (Dropout)         | (None, 6000)             | 0         
+
+|dense_1 (Dense)             | (None, 1000)             | 6001000   
+
+|batch_normalization_1       | (None, 1000)             | 4000      
+
+|dropout_2 (Dropout)         | (None, 1000)             | 0         
+
+|dense_2 (Dense)             | (None, 32)               | 32032     
+
+|dense_3 (Dense)             | (None, 1)                | 33        
+
 Total params: 7,135,793
 Trainable params: 7,133,429
 Non-trainable params: 2,364
