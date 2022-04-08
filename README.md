@@ -16,6 +16,34 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>  </p>
 
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 182)               0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 182)               728       
+_________________________________________________________________
+dropout (Dropout)            (None, 182)               0         
+_________________________________________________________________
+dense (Dense)                (None, 6000)              1098000   
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 6000)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1000)              6001000   
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 1000)              4000      
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 1000)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                32032     
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33        
+=================================================================
+Total params: 7,135,793
+Trainable params: 7,133,429
+Non-trainable params: 2,364
+
+
+
 **<p align="center"> CNN - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
