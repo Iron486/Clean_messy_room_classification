@@ -2,6 +2,7 @@
 # Clean vs messy room classification with deep learning techniques
 
 The aim of this problem was the correct classification of messy rooms from clean rooms.
+There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels.
 I tried some machine learning algorithms (such as RandomForestClassifier, SVMa and logistic regression), but obtaining very bad results on validation dataset (less than 80 per cent accuracy and 60 per cent recall) and overfitting.
 
 Hence, in this repository there are 4 notebooks: 
@@ -16,6 +17,8 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>   </p>
 
+This was the training curve obtained training an ANN. I obtained the input dataI read the data manually, using the `os` library and reading each image in the different folder. I preprocessed the data so that it was possible to train the ANN, I scaled the data and then performed PCA to reduce the dimension of the dataset.
+Then, I fit the model on train dataset, using the following parameters and hyperparameters:
 <p align="center">
  
 | Layer (type)                | Output Shape             | Param # |  
