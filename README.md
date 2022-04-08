@@ -29,10 +29,16 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 | dense_2 (Dense)             | (None, 32)               | 32032   |  
 | dense_3 (Dense)             | (None, 1)                | 33      |  
 
-Total params: 7,135,793
-Trainable params: 7,133,429
-Non-trainable params: 2,364
-
+- Total params: 7,135,793
+- Trainable params: 7,133,429
+- Non-trainable params: 2,364
+- Optimizer= {'name': 'Adam',
+ 'learning_rate': 4e-07,
+ 'decay': 0.0,
+ 'beta_1': 0.8,
+ 'beta_2': 0.999,
+ 'epsilon': 1e-07,
+ 'amsgrad': False}
 
 
 **<p align="center"> CNN - training </p>**
