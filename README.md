@@ -4,7 +4,7 @@
 The aim of this problem was the correct classification of messy rooms from clean rooms.
 
 There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels. 
-I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room
+I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room .
 
 I tried some machine learning algorithms (such as RandomForestClassifier, SVMa and logistic regression), but obtaining very bad results on validation dataset (less than 80 per cent accuracy and 60 per cent recall) and overfitting.
 
