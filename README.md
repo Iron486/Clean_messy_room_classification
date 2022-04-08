@@ -14,13 +14,13 @@ Below, are
 
 **<p align="center"> ANN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="500" height="300"/>  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="550" height="320"/>  </p>
 
 **<p align="center"> CNN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="500" height="300"/>  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="550" height="320"/>  </p>
 
 **<p align="center"> CNN with augmented dataset - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="500" height="300"/>  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="550" height="320"/>  </p>
 
