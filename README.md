@@ -11,14 +11,20 @@ Hence, in this repository there are 4 notebooks:
 - [CNN_augmented_dataset.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset.ipynb) in which I fit a Convolutional Neural Network to the augmented train dataset and predicted both on validation and test datasets..
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset.
 
-Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset:
+Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset and a brief description of the used methods.
+The first deep learning algorithm that I used, was a simple Artificial Neural Network. 
+
+Here, the obtained training curve can be observed:
 
 **<p align="center"> ANN - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>   </p>
 
-This was the training curve obtained training an ANN. I obtained the input dataI read the data manually, using the `os` library and reading each image in the different folder. I preprocessed the data so that it was possible to train the ANN, I scaled the data and then performed PCA to reduce the dimension of the dataset.
-Then, I fit the model on train dataset, using the following parameters and hyperparameters:
+The input data that the algorithm adopts, were obtained reading the data manually, using the `os` library and reading each image in the different folder. 
+I preprocessed the data so that it were possible to train the ANN, I scaled the data and then performed PCA to reduce the dimension of the dataset.
+
+Then, I fit the model on train dataset using the following parameters and hyperparameters:
+
 <p align="center">
  
 | Layer (type)                | Output Shape             | Param # |  
@@ -46,9 +52,17 @@ Then, I fit the model on train dataset, using the following parameters and hyper
  'amsgrad': False}
 </p>
 
+Then, I tried to build a Convolutional Neural Network and I obtained better results:
+
 **<p align="center"> CNN - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
+
+Similarly to the ANN, I preprocessed the data so that it were possible to fit the first convolutional layer and I scaled the pixel values.
+
+This time, I didn't perform PCA, but I put some max pooling layers interlocked between 2 convolutional layers and before the flatten layer,so that that they can also reduce the dimension of the image. 
+
+I used 120x120 pixel images and not 80x80 like in the ANN.
 
  <p align="center">
   
@@ -81,12 +95,26 @@ Then, I fit the model on train dataset, using the following parameters and hyper
  'amsgrad': False}
 </p>
 
+I finally tested the CNN with augmented dataset, obtaining the following training curve:
 
 **<p align="center"> CNN with augmented dataset - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="570" height="320"/>  </p>
 
+The input data were automatically fetched by Tensorflow through the function `ImageDataGenerator` in the `tensorflow.keras.preprocessing.image` module, giving as an input the training and validation datasets. 
 
+The hyperparameters elected to augment the data were the following: 
+- rescale=1/255,
+- rotation_range=3,
+- width_shift_range=0.1,
+- height_shift_range=0.1,
+- shear_range=0.1,
+- zoom_range=0.1,
+- horizontal_flip=True,
+- fill_mode='nearest'
+The model required way more time compared to the others, since the dimension of the image was bigger (150x150), the layers had more parameters than the previous CNN, and the augmentation slowed down the training time.
+
+Below, there are the hyperameters and parameters that I used to train the model:
 
 | Layer (type)                 | Output Shape             |  Param # |  
 |------------------------------|--------------------------|----------|
@@ -117,6 +145,15 @@ Then, I fit the model on train dataset, using the following parameters and hyper
 
 
 
-
 It can be clearly noticed that the CNN with augmented data gives us the best results, with a validation loss below 0.4 and accuracy on validation dataset between 0.85 and 0.95.
-On the other hand, in the simple CNN and ANN, we have worse results, with a validation loss above 0.4 and validation accuracy below 0.85
+On the other hand, in the simple CNN and ANN, we have worse results, with a validation loss above 0.4 and validation accuracy below 0.85. Also, overfitting can be noticed, especially in the training curve of the ANN.
+
+The last model was a bit more unstable compared to the other 2, even though I used a small learning rate and a batch size of 40 images. 
+
+To improve the stability, it could be necessary also to use other additional data and also tweak even better the parameters, using an even larger batch size, and some regularization techniques.
+
+I finally evaluated on test dataset the two CNNs and both classified correctly 8/10 of the dataset.
+
+To have better prediction and evaluation of the model, it's better to use more data for the training, validation and test datasets.
+
+
