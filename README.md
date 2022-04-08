@@ -148,7 +148,7 @@ Below, there are the hyperameters and parameters that I used to train the model:
 It can be clearly noticed that the CNN with augmented data gives us the best results, with a validation loss below 0.4 and accuracy on validation dataset between 0.85 and 0.95.
 On the other hand, in the simple CNN and ANN, we have worse results, with a validation loss above 0.4 and validation accuracy below 0.85. Also, overfitting can be noticed, especially in the training curve of the ANN.
 
-The last model was a bit more unstable compared to the other 2, even though I used a small learning rate and a batch size of 40 images. 
+The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
 To improve the stability, it could be necessary also to use other additional data and also tweak even better the parameters, using an even larger batch size, and some regularization techniques.
 
