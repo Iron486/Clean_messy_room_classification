@@ -12,4 +12,5 @@ Hence, in this repository there are 4 notebooks:
 
 Below, are
 <p align="center"> CNN with augmented dataset - training </p>
-![Ciaoo](https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png) 
+
+![Ciaoo](https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png=150x180) 
