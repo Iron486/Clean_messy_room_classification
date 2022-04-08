@@ -34,7 +34,7 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 - Total params: 7,135,793
 - Trainable params: 7,133,429
 - Non-trainable params: 2,364
-- Optimizer= {'name': 'Adam',
+- Optimizer = {'name': 'Adam',
  'learning_rate': 4e-07,
  'decay': 0.0,
  'beta_1': 0.8,
@@ -52,30 +52,68 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 | Layer (type)                | Output Shape             |  Param #|   
 |-----------------------------|--------------------------|---------|
 | conv2d_43 (Conv2D)          | (None, 118, 118, 16)     | 448     |  
-| max_pooling2d_43 (MaxPooling| (None, 59, 59, 16)       | 0       |  
+| max_pooling2d_43(MaxPooling)| (None, 59, 59, 16)       | 0       |  
 | conv2d_44 (Conv2D)          | (None, 57, 57, 32)       | 4640    |  
 | activation_11 (Activation)  | (None, 57, 57, 32)       | 0       |  
-| max_pooling2d_44 (MaxPooling|(None, 28, 28, 32)        | 0       |  
+| max_pooling2d_44(MaxPooling)|(None, 28, 28, 32)        | 0       |  
 | conv2d_45 (Conv2D)          | (None, 26, 26, 32)       | 9248    |  
-| max_pooling2d_45 (MaxPooling| (None, 13, 13, 32)       | 0       |  
+| max_pooling2d_45(MaxPooling)| (None, 13, 13, 32)       | 0       |  
 | conv2d_46 (Conv2D)          | (None, 11, 11, 64)       | 18496   |  
-| max_pooling2d_46 (MaxPooling| (None, 5, 5, 64)         | 0       |  
+| max_pooling2d_46(MaxPooling)| (None, 5, 5, 64)         | 0       |  
 | flatten_11 (Flatten)        | (None, 1600)             | 0       |  
 | dense_33 (Dense)            | (None, 1722)             | 2756922 |  
 | dense_34 (Dense)            | (None, 48)               | 82704   |  
 | dense_35 (Dense)            | (None, 1)                | 49      |  
 
 
-Total params: 2,872,507
-Trainable params: 2,872,507
-Non-trainable params: 0
-
+- Total params: 2,872,507
+- Trainable params: 2,872,507
+- Non-trainable params: 0
+- Optimizer = {'name': 'Adam',
+ 'learning_rate': 9e-06,
+ 'decay': 0.0,
+ 'beta_1': 0.9,
+ 'beta_2': 0.999,
+ 'epsilon': 1e-07,
+ 'amsgrad': False}
 </p>
 
 
 **<p align="center"> CNN with augmented dataset - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="570" height="320"/>  </p>
+
+
+
+| Layer (type)                 | Output Shape             |  Param # |  
+|------------------------------|--------------------------|----------|
+| conv2d (Conv2D)              | (None, 148, 148, 16)     | 448      | 
+| max_pooling2d (MaxPooling2D) | (None, 74, 74, 16)       | 0        | 
+| conv2d_1 (Conv2D)            | (None, 72, 72, 32)       | 4640     | 
+| activation (Activation)      | (None, 72, 72, 32)       | 0        |            
+| max_pooling2d_1(MaxPooling2) | (None, 36, 36, 32)       | 0        | 
+| conv2d_2 (Conv2D)            | (None, 34, 34, 64)       | 18496    | 
+| max_pooling2d_2(MaxPooling2) | (None, 17, 17, 64)       | 0        | 
+| conv2d_3 (Conv2D)            | (None, 15, 15, 64)       | 36928    |
+| max_pooling2d_3(MaxPooling2) | (None, 7, 7, 64)         | 0        | 
+| flatten (Flatten)            | (None, 3136)             | 0        | 
+| dense (Dense)                | (None, 1522)             | 4774514  | 
+| dense_1 (Dense)              | (None, 45)               | 68535    | 
+| dense_2 (Dense)              | (None, 1)                | 46       | 
+
+- Total params: 4,903,607
+- Trainable params: 4,903,607
+- Non-trainable params: 0
+- Optimizer = {'name': 'Adam',
+ 'learning_rate': 4.3e-05,
+ 'decay': 0.0,
+ 'beta_1': 0.9,
+ 'beta_2': 0.999,
+ 'epsilon': 1e-07,
+ 'amsgrad': False}
+
+
+
 
 It can be clearly noticed that the CNN with augmented data gives us the best results, with a validation loss below 0.4 and accuracy on validation dataset between 0.85 and 0.95.
 On the other hand, in the simple CNN and ANN, we have worse results, with a validation loss above 0.4 and validation accuracy below 0.85
