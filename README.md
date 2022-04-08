@@ -15,4 +15,4 @@ Below, are
 
 ![CNN_augmented](https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png width="100" height="100") 
 
-<img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="400" height="400"/>
+<img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="500" height="800"/>
