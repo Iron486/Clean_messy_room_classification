@@ -12,7 +12,7 @@ Hence, in this repository there are 4 notebooks:
 
 Below, are 
 
-<p align="center"> **ANN - training** </p>!
+**<p align="center"> **ANN - training** </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="600" height="400"/>  </p>
 
