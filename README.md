@@ -14,7 +14,7 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 **<p align="center"> ANN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>  
 
 | Layer (type)                | Output Shape             | Param # |  
 |-----------------------------|--------------------------|---------| 
@@ -39,11 +39,35 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
  'beta_2': 0.999,
  'epsilon': 1e-07,
  'amsgrad': False}
-
+</p>
 
 **<p align="center"> CNN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  
+
+| Layer (type)                | Output Shape             |  Param #|   
+|-----------------------------|--------------------------|---------|
+| conv2d_43 (Conv2D)          | (None, 118, 118, 16)     | 448     |  
+| max_pooling2d_43 (MaxPooling| (None, 59, 59, 16)       | 0       |  
+| conv2d_44 (Conv2D)          | (None, 57, 57, 32)       | 4640    |  
+| activation_11 (Activation)  | (None, 57, 57, 32)       | 0       |  
+| max_pooling2d_44 (MaxPooling|(None, 28, 28, 32)        | 0       |  
+| conv2d_45 (Conv2D)          | (None, 26, 26, 32)       | 9248    |  
+| max_pooling2d_45 (MaxPooling| (None, 13, 13, 32)       | 0       |  
+| conv2d_46 (Conv2D)          | (None, 11, 11, 64)       | 18496   |  
+| max_pooling2d_46 (MaxPooling| (None, 5, 5, 64)         | 0       |  
+| flatten_11 (Flatten)        | (None, 1600)             | 0       |  
+| dense_33 (Dense)            | (None, 1722)             | 2756922 |  
+| dense_34 (Dense)            | (None, 48)               | 82704   |  
+| dense_35 (Dense)            | (None, 1)                | 49      |  
+
+
+Total params: 2,872,507
+Trainable params: 2,872,507
+Non-trainable params: 0
+
+</p>
+
 
 **<p align="center"> CNN with augmented dataset - training </p>**
 
