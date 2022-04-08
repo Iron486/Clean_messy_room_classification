@@ -14,8 +14,10 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 **<p align="center"> ANN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>  
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>   </p>
 
+<p align="center">
+ 
 | Layer (type)                | Output Shape             | Param # |  
 |-----------------------------|--------------------------|---------| 
 | flatten (Flatten)           | (None, 182)              | 0       |  
@@ -43,8 +45,10 @@ Below, I reported the training curves represented for the ANN, CNN and CNN with 
 
 **<p align="center"> CNN - training </p>**
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
 
+ <p align="center">
+  
 | Layer (type)                | Output Shape             |  Param #|   
 |-----------------------------|--------------------------|---------|
 | conv2d_43 (Conv2D)          | (None, 118, 118, 16)     | 448     |  
