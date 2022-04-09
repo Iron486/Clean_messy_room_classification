@@ -1,7 +1,7 @@
 
 # Clean vs messy room classification with deep learning techniques
 
-The aim of this problem was the correct classification of messy rooms from clean rooms.
+**The aim of this problem was the correct classification of messy rooms from clean rooms**.
 
 There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels. 
 I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room .
@@ -25,7 +25,7 @@ Here, the obtained training curve can be observed:
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>   </p>
 
 The input data that the algorithm adopts were obtained reading the data manually, using the `os` library and reading each image in the different folder. 
-I preprocessed the data so that it were possible to train the ANN, I scaled the data and then I performed PCA to reduce the dimension of the dataset.
+I preprocessed the data so that it was possible to train the ANN, then I scaled the data and I performed PCA to reduce the dimension of the dataset.
 
 Then, I fit the model on train dataset using the following parameters and hyperparameters:
 
@@ -205,7 +205,7 @@ Below, there is an overview of the model:
  'epsilon': 1e-07,
  'amsgrad': False}
 
-I finally evaluated on test dataset the three different CNNs. The first two both classified correctly 8/10 of the dataset. 
-The last one, instead, reached 90 % of accuracy on test dataset.
+I finally evaluated on test dataset the three different CNNs. **The first two CNNs both classified correctly 8/10 of the dataset**. 
+The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset*+.
 
 
