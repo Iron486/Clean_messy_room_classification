@@ -149,13 +149,13 @@ Below, there are the hyperameters and parameters that I used to train the model
 
 
 
-It can be clearly noticed that the CNN with augmented data gives us the best results, with a validation loss below 0.4 and accuracy on validation dataset that varies between 0.85 and 0.95.
+It can be clearly noticed that **the CNN with augmented data gives us the best results**, with a **validation loss below 0.4** and **accuracy on validation dataset that varies between 0.85 and 0.95**.
 
-On the other hand, in the simple CNN and ANN, we have worse results with a validation loss above 0.4 and validation accuracy below 0.85. Moreover, overfitting can be noticed especially in the training curve of the ANN.
+On the other hand, **in the simple CNN and ANN, we have worse results** with a **validation loss above 0.4** and **validation accuracy below 0.85**. Moreover, **overfitting** can be noticed especially in the training curve of the ANN.
 
 The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
-To improve the stability, I also tried to put some dropout layers on the top neural network, obtaining this training curve: 
+**To improve stability**, I also tried to put some **dropout layers** on the top neural network, obtaining this training curve: 
 
 **<p align="center"> CNN with augmented dataset and dropouts - training </p>**
 
@@ -206,6 +206,6 @@ Below, there is an overview of the model:
  'amsgrad': False}
 
 I finally evaluated on test dataset the three different CNNs. **The first two CNNs both classified correctly 8/10 of the dataset**. 
-The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset*+.
+The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset**.
 
 
