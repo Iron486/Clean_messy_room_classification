@@ -157,7 +157,7 @@ The last model was a bit more unstable compared to the other two, even though I 
 
 To improve the stability, I also tried to put some dropout layers on the top neural network, obtaining this training curve: 
 
-**<p align="center"> CNN with augmented dataset and dropouts- training </p>**
+**<p align="center"> CNN with augmented dataset and dropouts - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162551147-ed2b0fd6-9355-43c0-96b3-5648d97e9ca5.png" width="570" height="320"/>  </p>
 
