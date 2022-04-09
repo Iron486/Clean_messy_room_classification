@@ -16,7 +16,7 @@ In this repository there are 5 notebooks:
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset. I also calculated the standard deviation of the value of each pixel, considering all the images of the train dataset.
 
 Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset and a brief description of the used methods.
-The first deep learning algorithm that I used, was a simple Artificial Neural Network. 
+The first deep learning algorithm that I used, was a simple **Artificial Neural Network**. 
 
 Here, the obtained training curve can be observed:
 
@@ -56,7 +56,7 @@ Then, I fit the model on train dataset using the following parameters and hyperp
  'amsgrad': False}
 </p>
 
-Then, I tried to build a Convolutional Neural Network and I obtained better results:
+Then, I tried to build a **Convolutional Neural Network** and I obtained better results:
 
 **<p align="center"> CNN - training </p>**
 
@@ -99,7 +99,7 @@ I used 120x120 pixel images and not 80x80 like in the ANN.
  'amsgrad': False}
 </p>
 
-I finally tested the CNN with augmented dataset, obtaining the following training curve:
+I finally tested the **CNN with augmented dataset**, obtaining the following training curve:
 
 **<p align="center"> CNN with augmented dataset - training </p>**
 
@@ -149,9 +149,9 @@ Below, there are the hyperameters and parameters that I used to train the model
 
 
 
-It can be clearly noticed that **the CNN with augmented data gives us the best results**, with a **validation loss below 0.4** and **accuracy on validation dataset that varies between 0.85 and 0.95**.
+It can be clearly noticed that **the CNN with augmented data** gives us the **best results**, with a **validation loss below 0.4** and **accuracy on validation dataset** that varies **between 0.85 and 0.95**.
 
-On the other hand, **in the simple CNN and ANN, we have worse results** with a **validation loss above 0.4** and **validation accuracy below 0.85**. Moreover, **overfitting** can be noticed especially in the training curve of the ANN.
+On the other hand, **in the simple CNN and ANN**, we have **worse results** with a **validation loss above 0.4** and **validation accuracy below 0.85**. Moreover, **overfitting** can be noticed especially in the training curve of the ANN.
 
 The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
