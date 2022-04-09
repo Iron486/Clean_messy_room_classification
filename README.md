@@ -157,6 +157,8 @@ The last model was a bit more unstable compared to the other two, even though I 
 
 To improve the stability, I also tried to put some dropout layers on the top neural network, obtaining this training curve: 
 
+**<p align="center"> CNN with augmented dataset and dropouts- training </p>**
+
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162551147-ed2b0fd6-9355-43c0-96b3-5648d97e9ca5.png" width="570" height="320"/>  </p>
 
 I considered a dropout of 0.15 on the first layer of the neural network, at the top of the convolutional and max pooling layers, and 0.1 at the successive layer. 
@@ -170,7 +172,6 @@ In fact, the training time was even longer than the previous, taking few hours t
 
 Below, there is an overview of the model:
 
-**<p align="center"> CNN with augmented dataset and dropouts- training </p>**
 
 
 | Layer (type)                 | Output Shape             | Param # |  
