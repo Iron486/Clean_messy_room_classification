@@ -8,10 +8,11 @@ I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-cle
 
 I tried some machine learning algorithms (such as RandomForestClassifier, SVMa and logistic regression), but obtaining very bad results on validation dataset (less than 80 % accuracy and 60 % recall) and overfitting.
 
-In this repository there are 4 notebooks: 
+In this repository there are 5 notebooks: 
 - [ANN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/ANN_training.ipynb) that I used to fit an Artificial Neural Network to the train dataset and predict on the validation dataset.
 - [CNN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_training.ipynb) in which I trained a Convolutional Neural Network and I predicted the model both on validation and test datasets.
 - [CNN_augmented_dataset.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset.ipynb) in which I fit a Convolutional Neural Network to the augmented train dataset and I predicted the model both on validation and test datasets.
+- [CNN_augmented_dataset_with_dropout.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset_with_dropout.ipynb) similar to the last one, but I modified some parameters and hyperparameters.
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset. I also calculated the standard deviation of the value of each pixel, considering all the images of the train dataset.
 
 Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset and a brief description of the used methods.
@@ -154,10 +155,53 @@ On the other hand, in the simple CNN and ANN, we have worse results with a valid
 
 The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
-To improve the stability, it could be necessary to use other additional data and also spending more time tweaking the hyperparameters, using an even larger batch size, some regularization techniques and having more available time to train the model.
+To improve the stability, I tried also to put some dropout layers on the top neural network, obtaining this training curve: 
 
-I finally evaluated on test dataset the two CNNs and both classified correctly 8/10 of the dataset.
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162551147-ed2b0fd6-9355-43c0-96b3-5648d97e9ca5.png" width="570" height="320"/>  </p>
 
-To have better prediction and evaluation of the model, it's better to use more data for the training, validation and test datasets.
+I considered a dropout of 0.15 on the first layer of the neural network, at the top of the convolutional and max pooling layers, and 0.1 at the successive layer. 
+The images had a size of 180x180 pixels, and I changed the learning rate from 0.000043 to 0.000004. 
+
+I increased a bit the parameter `patience` of the model, but without increasing it too much, since it would take even more time considering a high value.
+
+I also put an additional convolutional and max pool layer, and I decreased a bit the number of neurons in the last two hidden layers.
+
+In fact, the training time was even longer than the previous, taking few hours to obtain the described result.
+
+Below, there are the parameters of the model:
+
+| Layer (type)                 | Output Shape             | Param # |  
+|------------------------------|--------------------------|---------|
+| conv2d (Conv2D)              | (None, 178, 178, 16)     | 448     |  
+| max_pooling2d (MaxPooling2D) | (None, 89, 89, 16)       | 0       |  
+| conv2d_1 (Conv2D)            | (None, 87, 87, 32)       | 4640    |  
+| activation (Activation)      | (None, 87, 87, 32)       | 0       |  
+| max_pooling2d_1 (MaxPooling2 | (None, 43, 43, 32)       | 0       |  
+| conv2d_2 (Conv2D)            | (None, 41, 41, 64)       | 18496   |  
+| max_pooling2d_2 (MaxPooling2 | (None, 20, 20, 64)       | 0       |  
+| conv2d_3 (Conv2D)            | (None, 18, 18, 64)       | 36928   |  
+| max_pooling2d_3 (MaxPooling2 | (None, 9, 9, 64)         | 0       |  
+| conv2d_4 (Conv2D)            | (None, 7, 7, 64)         | 36928   |  
+| max_pooling2d_4 (MaxPooling2 | (None, 3, 3, 64)         | 0       |  
+| flatten (Flatten)            | (None, 576)              | 0       |  
+| dense (Dense)                | (None, 1200)             | 692400  |  
+| dropout (Dropout)            | (None, 1200)             | 0       |  
+| dense_1 (Dense)              | (None, 38)               | 45638   |  
+| dropout_1 (Dropout)          | (None, 38)               | 0       |  
+| dense_2 (Dense)              | (None, 1)                | 39      |  
+
+- Total params: 835,517
+- Trainable params: 835,517
+- Non-trainable params: 0
+- Optimizer =  {'name': 'Adam',
+ 'learning_rate': 4e-06,
+ 'decay': 0.0,
+ 'beta_1': 0.9,
+ 'beta_2': 0.999,
+ 'epsilon': 1e-07,
+ 'amsgrad': False}
+
+I finally evaluated on test dataset the three different CNNs. The first two both classified correctly 8/10 of the dataset. 
+The last one, instead, reached 90 % of accuracy on test dataset.
 
 
