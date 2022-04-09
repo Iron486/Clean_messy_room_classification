@@ -9,10 +9,10 @@ I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-cle
 I tried some machine learning algorithms (such as RandomForestClassifier, SVMa and logistic regression), but obtaining very bad results on validation dataset (less than 80 % accuracy and 60 % recall) and overfitting.
 
 In this repository there are 5 notebooks: 
-- [ANN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/ANN_training.ipynb) that I used to fit an Artificial Neural Network to the train dataset and predict on the validation dataset.
-- [CNN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_training.ipynb) in which I trained a Convolutional Neural Network and I predicted the model both on validation and test datasets.
-- [CNN_augmented_dataset.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset.ipynb) in which I fit a Convolutional Neural Network to the augmented train dataset and I predicted the model both on validation and test datasets.
-- [CNN_augmented_dataset_with_dropout.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset_with_dropout.ipynb) similar to the last one, but I modified some parameters and hyperparameters.
+- [ANN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/ANN_training.ipynb) that I used to fit an **Artificial Neural Network** to the train dataset and predict on the validation dataset.
+- [CNN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_training.ipynb) in which I trained a **Convolutional Neural Network** and I predicted the model both on validation and test datasets.
+- [CNN_augmented_dataset.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset.ipynb) in which I fit a **Convolutional Neural Network with an augmented train dataset** and I predicted the model both on validation and test datasets.
+- [CNN_augmented_dataset_with_dropout.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset_with_dropout.ipynb) similar to the last one, but I **modified** some **parameters and hyperparameters**.
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset. I also calculated the standard deviation of the value of each pixel, considering all the images of the train dataset.
 
 Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset and a brief description of the used methods.
