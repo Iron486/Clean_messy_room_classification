@@ -207,6 +207,6 @@ Below, there is an overview of the model:
 
 I finally evaluated on test dataset the three different CNNs. **The first two CNNs both classified correctly 8/10 of the dataset**. 
 The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset**.
- {% file:///C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.html}
+ {% "C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.html"}
 
-#<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
+<p align="center"> <img src="C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.htm" width="570" height="320"/>  </p>
