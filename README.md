@@ -209,4 +209,4 @@ I finally evaluated on test dataset the three different CNNs. **The first two CN
 The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset**.
  {% file:///C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.html %}
 
-<p align="center"> <img src="file:///C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.html" width="570" height="320"/>  </p>
+<p align="center"> <img src="C:/Users/diego/OneDrive/Desktop/DS/Unsupervised_learning_country_data/world_help.html" width="570" height="320"/>  </p>
