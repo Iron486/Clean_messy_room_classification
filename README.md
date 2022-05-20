@@ -166,7 +166,7 @@ The last model was a bit more unstable compared to the other two, even though I 
 I considered a dropout of 0.15 on the first layer of the neural network, at the top of the convolutional layers, while 0.1 at the successive layer. 
 The images had a size of 180x180 pixels, and I changed the learning rate of the previous model without dropout from 0.000043 to 0.000004. 
 
-I slighlty increased the parameter `patience` of the model, without increasing it too much; since it would take more time considering a very high value.
+I increased the parameter `patience` of the model, without increasing it too much, since it would take more time to train the model considering a very high value.
 
 Furthermore, I added an additional convolutional and max pool layer, and I decreased a bit the number of neurons in the last two hidden layers.
 
