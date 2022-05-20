@@ -1,12 +1,11 @@
 
 # Clean vs messy room classification with deep learning techniques
 
-**The aim of this problem was the correct classification of messy rooms from clean rooms**.
+**The aim of this project was the correct classification of messy rooms from clean rooms**.
 
 There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels. 
 I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room .
 
-I tried some machine learning algorithms (such as RandomForestClassifier, SVMa and logistic regression), but obtaining very bad results on validation dataset (less than 80 % accuracy and 60 % recall) and overfitting.
 
 In this repository there are 5 notebooks: 
 - [ANN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/ANN_training.ipynb) that I used to fit an **Artificial Neural Network** to the train dataset and predict on the validation dataset.
@@ -15,7 +14,10 @@ In this repository there are 5 notebooks:
 - [CNN_augmented_dataset_with_dropout.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset_with_dropout.ipynb) similar to the last one, but I **modified** some **parameters and hyperparameters**.
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset. I also calculated the standard deviation of the value of each pixel, considering all the images of the train dataset.
 
-Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset and a brief description of the used methods.
+I tried some basic machine learning algorithms, too (such as RandomForestClassifier, SVMa and logistic regression). However, I obtained very bad results on validation dataset (less than 80 % accuracy and 60 % recall) with a large overfitting.
+
+
+Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset, along with a brief description of the used methods.
 The first deep learning algorithm that I used, was a simple **Artificial Neural Network**. 
 
 Here, the obtained training curve can be observed:
@@ -25,9 +27,9 @@ Here, the obtained training curve can be observed:
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538666-fb66e587-a08f-452f-bd32-ff55bba4c12f.png" width="570" height="320"/>   </p>
 
 The input data that the algorithm adopts were obtained reading the data manually, using the `os` library and reading each image in the different folder. 
-I preprocessed the data so that it was possible to train the ANN, then I scaled the data and I performed PCA to reduce the dimension of the dataset.
+I preprocessed the data so that it was possible to train the ANN; then I scaled the data and I performed PCA to reduce the dimension of the dataset.
 
-Then, I fit the model on train dataset using the following parameters and hyperparameters:
+Next, I fit the model on train dataset using the following parameters and hyperparameters:
 
 <p align="center">
  
@@ -56,15 +58,15 @@ Then, I fit the model on train dataset using the following parameters and hyperp
  'amsgrad': False}
 </p>
 
-Then, I tried to build a **Convolutional Neural Network** and I obtained better results:
+Afterwards, I tried to build a **Convolutional Neural Network** and I obtained better results:
 
 **<p align="center"> CNN - training </p>**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162538984-6aeacc8a-5b42-4e15-b2cd-2dcd48d0a193.png" width="570" height="320"/>  </p>
 
-Similarly to the ANN, I preprocessed the data in such a way that it were possible to fit the first convolutional layer and I scaled the pixel values.
+Similarly to the ANN, I preprocessed the data in such a way that it was possible to fit the first convolutional layer, and then I scaled the pixel values.
 
-This time, I didn't perform PCA, but I put some max pooling layers interposed between 2 convolutional layers and before the flatten layer,so that the dimension of the image can also be reduced. 
+This time, I didn't perform PCA but I put some max pooling layers interposed between 2 convolutional layers and before the flatten layer,so that the dimension of the image can also be reduced. 
 
 I used 120x120 pixel images and not 80x80 like in the ANN.
 
@@ -151,7 +153,7 @@ Below, there are the hyperameters and parameters that I used to train the model
 
 It can be clearly noticed that **the CNN with augmented data** gives us the **best results**, with a **validation loss below 0.4** and **accuracy on validation dataset** that varies **between 0.85 and 0.95**.
 
-On the other hand, **in the simple CNN and ANN**, we have **worse results** with a **validation loss above 0.4** and **validation accuracy below 0.85**. Moreover, **overfitting** can be noticed especially in the training curve of the ANN.
+On the other hand, **in the simple CNN and ANN** we have **worse results** with a **validation loss above 0.4** and **validation accuracy below 0.85**. Moreover, **overfitting** can be noticed especially in the training curve of the ANN.
 
 The last model was a bit more unstable compared to the other two, even though I used a small learning rate and a batch size of 40 images. 
 
@@ -161,12 +163,12 @@ The last model was a bit more unstable compared to the other two, even though I 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162551147-ed2b0fd6-9355-43c0-96b3-5648d97e9ca5.png" width="570" height="320"/>  </p>
 
-I considered a dropout of 0.15 on the first layer of the neural network, at the top of the convolutional and max pooling layers, and 0.1 at the successive layer. 
-The images had a size of 180x180 pixels, and I changed the learning rate from 0.000043 to 0.000004. 
+I considered a dropout of 0.15 on the first layer of the neural network, at the top of the convolutional layers, while 0.1 at the successive layer. 
+The images had a size of 180x180 pixels, and I changed the learning rate of the previous model without dropout from 0.000043 to 0.000004. 
 
-I increased a bit the parameter `patience` of the model, but without increasing it too much, since it would take even more time considering a high value.
+I slighlty increased the parameter `patience` of the model, without increasing it too much; since it would take more time considering a very high value.
 
-Furthermore, I also add an additional convolutional and max pool layer, and I decreased a bit the number of neurons in the last two hidden layers.
+Furthermore, I added an additional convolutional and max pool layer, and I decreased a bit the number of neurons in the last two hidden layers.
 
 In fact, the training time was even longer than the previous, taking few hours to obtain the described result.
 
