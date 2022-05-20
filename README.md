@@ -8,6 +8,7 @@ I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-cle
 
 
 In this repository there are 5 notebooks: 
+
 - [ANN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/ANN_training.ipynb) that I used to fit an **Artificial Neural Network** to the train dataset and predict on the validation dataset.
 - [CNN_training.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_training.ipynb) in which I trained a **Convolutional Neural Network** and I predicted the model both on validation and test datasets.
 - [CNN_augmented_dataset.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset.ipynb) in which I fit a **Convolutional Neural Network with an augmented train dataset** and I predicted the model both on validation and test datasets.
