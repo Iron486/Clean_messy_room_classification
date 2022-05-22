@@ -1,7 +1,7 @@
 
 # Clean vs messy room classification with deep learning techniques
 
-**The aim of this project was the correct classification of messy rooms from clean rooms**.
+The aim of this project was the correct classification of messy rooms from clean rooms.
 
 There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels. 
 I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room .
