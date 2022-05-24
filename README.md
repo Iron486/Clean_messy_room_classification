@@ -59,6 +59,21 @@ Next, I fit the model on train dataset using the following parameters and hyperp
  'amsgrad': False}
 </p>
 
+Note that Adam optimer was used not only for this model, but for all the training models. Below, there is the formula of the Adam Optimer written in LaTeX:
+
+&nbsp;
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/170128532-dc14d2aa-f105-489c-8990-e4418baf1650.png" width="270" height="205"/>  </p>
+
+&nbsp;
+
+The parameters that appear both in the formula and in the Keras interface are `alpha`, called the learning rate; `beta_1` and `beta_2` that are initial decay rates used to estimate the first and second moments of the gradient; and `epsilon` that is a small number used to avoid that the second term in the right-hand side of the last equation cancels out.
+
+`Decay` and `amsgrad` don't belong to the Adam optimizer, and they are respectively responsible for the modification of the decay of the gradient through the epochs and
+the improvement of the convergence of the algorithm, trying to prevent large updates.
+
+For further information, here is the link to the paper of the optimizer: https://arxiv.org/abs/1412.6980
+
 Afterwards, I tried to build a **Convolutional Neural Network** and I obtained better results:
 
 **<p align="center"> CNN - training </p>**
@@ -105,8 +120,11 @@ I used 120x120 pixel images and not 80x80 like in the ANN.
 I finally tested the **CNN with augmented dataset**, obtaining the following training curve:
 
 **<p align="center"> CNN with augmented dataset - training </p>**
+&nbsp;
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="570" height="320"/>  </p>
+
+
 
 The input data were automatically fetched by Tensorflow through the function `ImageDataGenerator` in the `tensorflow.keras.preprocessing.image` module, giving as an input the training and validation datasets. 
 
