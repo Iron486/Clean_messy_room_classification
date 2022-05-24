@@ -15,7 +15,7 @@ In this repository there are 5 notebooks:
 - [CNN_augmented_dataset_with_dropout.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/CNN_augmented_dataset_with_dropout.ipynb) similar to the last one, but I **modified** some **parameters and hyperparameters**.
 - [Bonus_exercise.ipynb](https://github.com/Iron486/Clean_messy_room_classification/blob/main/Bonus_exercise.ipynb) that is an exercise that I did only for curiosity, calculating the average number of red,blue and green component for each pixel within the images on the train dataset. I also calculated the standard deviation of the value of each pixel, considering all the images of the train dataset.
 
-I tried some basic machine learning algorithms, too (such as RandomForestClassifier, SVMa and logistic regression). However, I obtained very bad results on validation dataset (less than 80 % accuracy and 60 % recall) with a large overfitting.
+I tried some basic machine learning algorithms, too (such as RandomForestClassifier, SVMa and logistic regression). However, I obtained very bad results on validation dataset (less than 80% accuracy and 60% recall) with a large overfitting.
 
 
 Below, I reported the training curves represented for the ANN, CNN and CNN with augmented dataset, along with a brief description of the used methods.
@@ -227,5 +227,5 @@ Below, there is an overview of the model:
  'amsgrad': False}
 
 I finally evaluated on test dataset the three different CNNs. **The first two CNNs both classified correctly 8/10 of the dataset**. 
-The **CNN with augmented dataset and dropout layers**, instead, **reached 90 % of accuracy on test dataset**.
+The **CNN with augmented dataset and dropout layers**, instead, **reached 90% of accuracy on test dataset**.
  
