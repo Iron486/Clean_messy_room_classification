@@ -4,7 +4,7 @@
 The aim of this project was the correct classification of messy rooms from clean rooms.
 
 There were given the train and validation datasets both containing separate images of messy and clean rooms, and the test dataset without labels. 
-I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room .
+I fetched the data from here https://www.kaggle.com/datasets/cdawn1/messy-vs-clean-room.
 
 
 In this repository there are 5 notebooks: 
@@ -72,7 +72,7 @@ The parameters that appear both in the formula and in the Keras interface are `a
 `Decay` and `amsgrad` don't belong to the Adam optimizer, and they are respectively responsible for the modification of the decay of the gradient through the epochs and
 the improvement of the convergence of the algorithm, trying to prevent large updates.
 
-For further information, here is the link to the paper of the optimizer: https://arxiv.org/abs/1412.6980
+For further information, here is the link to the paper of the optimizer: https://arxiv.org/abs/1412.6980.
 
 Afterwards, I tried to build a **Convolutional Neural Network** and I obtained better results:
 
@@ -120,7 +120,7 @@ I used 120x120 pixel images and not 80x80 like in the ANN.
 I finally tested the **CNN with augmented dataset**, obtaining the following training curve:
 
 **<p align="center"> CNN with augmented dataset - training </p>**
-&nbsp;
+
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/162535217-ebe6df02-97e2-4239-8f22-508788015d1b.png" width="570" height="320"/>  </p>
 
